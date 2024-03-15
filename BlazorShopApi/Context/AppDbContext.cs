@@ -9,14 +9,14 @@ namespace BlazorShopApi.Context
         {
         }
 
-        DbSet<Carrinho> Carrinhos { get; set; }
-        DbSet<CarrinhoItem> carrinhoItems { get; set; }
+        public DbSet<Carrinho> Carrinhos { get; set; }
+        public DbSet<CarrinhoItem> carrinhoItems { get; set; }
 
-        DbSet<Categorias> Categorias { get; set; }
+        public DbSet<Categorias> Categorias { get; set; }
 
-        DbSet<Produto> Produtos { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
 
-        DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
