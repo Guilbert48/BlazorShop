@@ -32,7 +32,7 @@ namespace BlazorShopApi.Repositories
         {
             var produtos =  await _context.Produtos
                 .Include(p => p.Categorias)
-                .Where(p => p.CategoriaId == id)
+                .Where(p => p.CategoriasId == id)
                 .ToListAsync();
 
             return produtos;

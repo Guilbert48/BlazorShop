@@ -36,7 +36,7 @@ namespace BlazorShopApi.Context
                 ImagemUrl = "Imagens/Beleza/Beleza1.png",
                 Preco = 100,
                 Quantidade = 100,
-                CategoriaId = 1,
+                CategoriasId = 1,
             });
 
         }

@@ -27,12 +27,12 @@ namespace BlazorShopApi.Mapping
                     ImagemUrl = produto.ImagemUrl,
                     Preco = produto.Preco,
                     Quantidade = produto.Quantidade,
-                    CategoriaId = produto.CategoriaId,
+                    CategoriaId = produto.CategoriasId,
                     CategoriaNome = produto.Categorias.Nome
 
                 }).ToList();
         }
-        public static ProdutoDTO ConverterProdutosParaDto(Produto produto)
+        public static ProdutoDTO ConverterProdutoParaDto(this Produto produto)
         {
             return new ProdutoDTO
             {
@@ -42,7 +42,7 @@ namespace BlazorShopApi.Mapping
                 ImagemUrl = produto.ImagemUrl,
                 Preco = produto.Preco,
                 Quantidade = produto.Quantidade,
-                CategoriaId = produto.CategoriaId,
+                CategoriaId = produto.CategoriasId,
                 CategoriaNome = produto.Categorias.Nome
             };             
         }
@@ -63,6 +63,22 @@ namespace BlazorShopApi.Mapping
                         Quantidade = carrinhoItem.Quantidade,
                         PrecoTotal = produto.Preco * carrinhoItem.Quantidade
                     }).ToList();
+        }
+
+        public static CarrinhoItemDto ConverterCarrinhoItemParaDto(this CarrinhoItem carrinhoItem, Produto produto)
+        {
+            return new CarrinhoItemDto
+            {
+                Id = carrinhoItem.Id,
+                ProdutoId = carrinhoItem.ProdutoId,
+                ProdutoNome = produto.Nome,
+                ProdutoDescricao = produto.Descricao,
+                ProdutoImagemUrl = produto.ImagemUrl,
+                Preco = produto.Preco,
+                CarrinhoId = carrinhoItem.CarrinhoId,
+                Quantidade = carrinhoItem.Quantidade,
+                PrecoTotal = produto.Preco * carrinhoItem.Quantidade
+            };
         }
     }
 }
