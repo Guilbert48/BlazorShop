@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShop.Web", "BlazorShop.Web\BlazorShop.Web.csproj", "{CC779984-1117-4912-8F88-5DEF7462373F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShopApi", "BlazorShopApi\BlazorShopApi.csproj", "{A8A210CF-D689-4E20-A87B-B3BBFC1CF615}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorShopModels", "BlazorShopModels\BlazorShopModels.csproj", "{5A1A6810-58CF-4084-86CF-BF5EE8741FDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShopModels", "BlazorShopModels\BlazorShopModels.csproj", "{5A1A6810-58CF-4084-86CF-BF5EE8741FDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorShopWeb", "BlazorShopWeb\BlazorShopWeb.csproj", "{8B246220-C9A1-4F9C-B846-BF4E82D4A994}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CC779984-1117-4912-8F88-5DEF7462373F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CC779984-1117-4912-8F88-5DEF7462373F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CC779984-1117-4912-8F88-5DEF7462373F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CC779984-1117-4912-8F88-5DEF7462373F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A8A210CF-D689-4E20-A87B-B3BBFC1CF615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A8A210CF-D689-4E20-A87B-B3BBFC1CF615}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8A210CF-D689-4E20-A87B-B3BBFC1CF615}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +23,10 @@ Global
 		{5A1A6810-58CF-4084-86CF-BF5EE8741FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A1A6810-58CF-4084-86CF-BF5EE8741FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A1A6810-58CF-4084-86CF-BF5EE8741FDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B246220-C9A1-4F9C-B846-BF4E82D4A994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B246220-C9A1-4F9C-B846-BF4E82D4A994}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B246220-C9A1-4F9C-B846-BF4E82D4A994}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B246220-C9A1-4F9C-B846-BF4E82D4A994}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

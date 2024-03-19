@@ -22,6 +22,8 @@ namespace BlazorShopApi.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Produtos
+
+            //Beleza
             modelBuilder.Entity<Produto>().HasData(new Produto
             {
                 Id = 1,
