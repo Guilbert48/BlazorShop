@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShopApi", "BlazorShop
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShopModels", "BlazorShopModels\BlazorShopModels.csproj", "{5A1A6810-58CF-4084-86CF-BF5EE8741FDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorShopWeb", "BlazorShopWeb\BlazorShopWeb.csproj", "{8B246220-C9A1-4F9C-B846-BF4E82D4A994}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShopWeb", "BlazorShopWeb\BlazorShopWeb.csproj", "{8B246220-C9A1-4F9C-B846-BF4E82D4A994}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
