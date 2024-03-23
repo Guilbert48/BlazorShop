@@ -4,12 +4,12 @@ namespace BlazorShopWeb.Services
     public class ProdutoServices : IProdutosServices
     {
         public HttpClient _httpClient;
-        public ILogger _logger;
+        
 
-        public ProdutoServices(HttpClient httpClient, ILogger logger)
+        public ProdutoServices(HttpClient httpClient)
         {
             _httpClient = httpClient;
-            _logger = logger;
+           
         }
 
         public async Task<IEnumerable<ProdutoDTO>> GetItens()
@@ -22,7 +22,7 @@ namespace BlazorShopWeb.Services
             catch
             (Exception ex)
             {
-                _logger.LogError("Erro");
+
                 throw;
             }          
         }

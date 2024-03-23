@@ -1,5 +1,38 @@
-﻿<h3>Catalogo</h3>
+﻿@page "/produtos"
+@inject IProdutosServices produtoService
+
+@if (Produtos == null)
+{
+    <h3>Carregando Produtos</h3>
+}
+else
+{
+    <h3 class="mb-5">Produtos</h3>
+    if(Produtos.Count() > 0)
+    {
+        <div class="row mt-3">
+            @foreach (var item in Produtos)
+            {
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">
+                            @item.Preco.ToString("c")
+                        </h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+}
 
 @code {
+    public IEnumerable<ProdutoDTO> ? Produtos { get; set; }
 
+    protected override async Task OnInitializedAsync()
+    {
+        Produtos = await produtoService.GetItens();
+    }
 }

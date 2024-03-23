@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-var baseUrl = "http://localhost:5066";
+var baseUrl = "http://localhost:3820";
 
 builder.Services.AddScoped(sp => new HttpClient
 {
@@ -15,6 +15,7 @@ builder.Services.AddScoped(sp => new HttpClient
 });
 
 builder.Services.AddScoped<IProdutosServices, ProdutoServices>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
