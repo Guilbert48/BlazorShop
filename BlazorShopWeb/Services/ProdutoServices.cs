@@ -4,11 +4,12 @@ namespace BlazorShopWeb.Services
     public class ProdutoServices : IProdutosServices
     {
         public HttpClient _httpClient;
-        
+        public ILogger<ProdutoServices> _logger;
 
-        public ProdutoServices(HttpClient httpClient)
+        public ProdutoServices(HttpClient httpClient, ILogger<ProdutoServices>logger)
         {
             _httpClient = httpClient;
+            _logger = logger;   
            
         }
 

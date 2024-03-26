@@ -3,12 +3,12 @@
 
 @if (Produtos == null)
 {
-    <h3>Carregando Produtos</h3>
+    <h3>Carregando Produtos...</h3>
 }
 else
 {
     <h3 class="mb-5">Produtos</h3>
-    if(Produtos.Count() > 0)
+    @if(Produtos.Count() > 0)
     {
         <div class="row mt-3">
             @foreach (var item in Produtos)
