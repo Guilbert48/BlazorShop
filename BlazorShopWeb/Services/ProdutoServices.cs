@@ -12,7 +12,7 @@ namespace BlazorShopWeb.Services
             _logger = logger;   
            
         }
-
+        
         public async Task<IEnumerable<ProdutoDTO>> GetItens()
         {
             try
@@ -23,7 +23,7 @@ namespace BlazorShopWeb.Services
             catch
             (Exception ex)
             {
-
+                _logger.LogError("Erro ao acessar a api : produtos");
                 throw;
             }          
         }

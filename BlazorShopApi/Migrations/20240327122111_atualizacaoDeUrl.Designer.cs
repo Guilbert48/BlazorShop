@@ -3,6 +3,7 @@ using BlazorShopApi.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlazorShopApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240327122111_atualizacaoDeUrl")]
+    partial class atualizacaoDeUrl
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -158,7 +161,7 @@ namespace BlazorShopApi.Migrations
                             Id = 1,
                             CategoriasId = 1,
                             Descricao = "Kit de beleza e cuidados com a pele",
-                            ImagemUrl = "Imagens/Beleza/b1.png",
+                            ImagemUrl = "Imagens/Beleza/Beleza1.png",
                             Nome = "Gloss - Beleza kit",
                             Preco = 100m,
                             Quantidade = 100
@@ -168,7 +171,7 @@ namespace BlazorShopApi.Migrations
                             Id = 2,
                             CategoriasId = 1,
                             Descricao = "Um kit fornecido pela Curology, contendo produtos para cuidados com a pele",
-                            ImagemUrl = "/Imagens/Beleza/b2.png",
+                            ImagemUrl = "/Imagens/Beleza/Beleza2.png",
                             Nome = "Curology - Kit para Pele",
                             Preco = 50m,
                             Quantidade = 45
@@ -178,7 +181,7 @@ namespace BlazorShopApi.Migrations
                             Id = 3,
                             CategoriasId = 1,
                             Descricao = "Um kit fornecido pela Glossier, contendo produtos para cuidados com a pele",
-                            ImagemUrl = "/Imagens/Beleza/b3.png",
+                            ImagemUrl = "/Imagens/Beleza/Beleza3.png",
                             Nome = "Óleo de Coco Orgânico",
                             Preco = 20m,
                             Quantidade = 30
@@ -188,7 +191,7 @@ namespace BlazorShopApi.Migrations
                             Id = 4,
                             CategoriasId = 1,
                             Descricao = "Um kit fornecido pela Curology, contendo produtos para cuidados com a pele",
-                            ImagemUrl = "/Imagens/Beleza/b4.png",
+                            ImagemUrl = "/Imagens/Beleza/Beleza4.png",
                             Nome = "Schwarzkopf - Kit de cuidados com a pele e cabelo",
                             Preco = 50m,
                             Quantidade = 60
@@ -198,7 +201,7 @@ namespace BlazorShopApi.Migrations
                             Id = 5,
                             CategoriasId = 1,
                             Descricao = "Kit de cuidados com a pele, contendo produtos para cuidados com a pele e cabelos",
-                            ImagemUrl = "/Imagens/Beleza/b5.png",
+                            ImagemUrl = "/Imagens/Beleza/Beleza5.png",
                             Nome = "Kit de cuidados com a pele",
                             Preco = 30m,
                             Quantidade = 85
@@ -208,7 +211,7 @@ namespace BlazorShopApi.Migrations
                             Id = 6,
                             CategoriasId = 3,
                             Descricao = "Air Pods - fones de ouvido sem fio intra-auriculares",
-                            ImagemUrl = "/Imagens/Eletronicos/e1.png",
+                            ImagemUrl = "/Imagens/Eletronicos/eletronico1.png",
                             Nome = "Fones de ouvidos",
                             Preco = 100m,
                             Quantidade = 120
@@ -218,7 +221,7 @@ namespace BlazorShopApi.Migrations
                             Id = 7,
                             CategoriasId = 3,
                             Descricao = "Fones de ouvido dourados na orelha - esses fones de ouvido não são sem fio",
-                            ImagemUrl = "/Imagens/Eletronicos/e2.png",
+                            ImagemUrl = "/Imagens/Eletronicos/eletronico2.png",
                             Nome = "Fones de ouvido dourados",
                             Preco = 40m,
                             Quantidade = 200
@@ -228,7 +231,7 @@ namespace BlazorShopApi.Migrations
                             Id = 8,
                             CategoriasId = 3,
                             Descricao = "Fones de ouvido pretos na orelha - esses fones de ouvido não são sem fio",
-                            ImagemUrl = "/Imagens/Eletronicos/e3.png",
+                            ImagemUrl = "/Imagens/Eletronicos/eletronico3.png",
                             Nome = "Fones de ouvido pretos",
                             Preco = 40m,
                             Quantidade = 300
@@ -238,7 +241,7 @@ namespace BlazorShopApi.Migrations
                             Id = 9,
                             CategoriasId = 3,
                             Descricao = "Câmera Digital Sennheiser - Câmera digital de alta qualidade fornecida pela Sennheiser - inclui tripé",
-                            ImagemUrl = "/Imagens/Eletronicos/e4.png",
+                            ImagemUrl = "/Imagens/Eletronicos/eletronico4.png",
                             Nome = "Câmera digital Sennheiser com tripé",
                             Preco = 600m,
                             Quantidade = 20
@@ -248,7 +251,7 @@ namespace BlazorShopApi.Migrations
                             Id = 10,
                             CategoriasId = 3,
                             Descricao = "Canon Digital Camera - Câmera digital de alta qualidade fornecida pela Canon",
-                            ImagemUrl = "/Imagens/Eletronicos/e5.png",
+                            ImagemUrl = "/Imagens/Eletronicos/eletronico5.png",
                             Nome = "Câmera Digital Canon",
                             Preco = 500m,
                             Quantidade = 15
@@ -258,7 +261,7 @@ namespace BlazorShopApi.Migrations
                             Id = 11,
                             CategoriasId = 3,
                             Descricao = "Gameboy - Fornecido por Nintendo",
-                            ImagemUrl = "/Imagens/Eletronicos/e6.png",
+                            ImagemUrl = "/Imagens/Eletronicos/tecnologia6.png",
                             Nome = "Nintendo Gameboy",
                             Preco = 100m,
                             Quantidade = 60
@@ -268,7 +271,7 @@ namespace BlazorShopApi.Migrations
                             Id = 12,
                             CategoriasId = 2,
                             Descricao = "Cadeira de escritório em couro preto muito confortável",
-                            ImagemUrl = "/Imagens/Moveis/m1.png",
+                            ImagemUrl = "/Imagens/Moveis/moveis1.png",
                             Nome = "Cadeira de escritório de couro preto",
                             Preco = 50m,
                             Quantidade = 212
@@ -278,7 +281,7 @@ namespace BlazorShopApi.Migrations
                             Id = 13,
                             CategoriasId = 2,
                             Descricao = "Cadeira de escritório em couro rosa muito confortável",
-                            ImagemUrl = "/Imagens/Moveis/m2.png",
+                            ImagemUrl = "/Imagens/Moveis/moveis2.png",
                             Nome = "Cadeira de escritório de couro rosa",
                             Preco = 50m,
                             Quantidade = 112
@@ -288,7 +291,7 @@ namespace BlazorShopApi.Migrations
                             Id = 14,
                             CategoriasId = 2,
                             Descricao = "Poltrona muito confortável",
-                            ImagemUrl = "/Imagens/Moveis/m3.png",
+                            ImagemUrl = "/Imagens/Moveis/moveis3.png",
                             Nome = "Espreguiçadeira",
                             Preco = 70m,
                             Quantidade = 90
@@ -298,7 +301,7 @@ namespace BlazorShopApi.Migrations
                             Id = 15,
                             CategoriasId = 2,
                             Descricao = "Poltrona prateada muito confortável",
-                            ImagemUrl = "/Imagens/Moveis/m4.png",
+                            ImagemUrl = "/Imagens/Moveis/moveis4.png",
                             Nome = "Silver Lounge Chair",
                             Preco = 120m,
                             Quantidade = 95
@@ -308,7 +311,7 @@ namespace BlazorShopApi.Migrations
                             Id = 16,
                             CategoriasId = 2,
                             Descricao = "Abajur de mesa de porcelana branco e azul",
-                            ImagemUrl = "/Imagens/Moveis/m6.png",
+                            ImagemUrl = "/Imagens/Moveis/moveis6.png",
                             Nome = "Luminária de mesa de porcelana",
                             Preco = 15m,
                             Quantidade = 100
@@ -318,7 +321,7 @@ namespace BlazorShopApi.Migrations
                             Id = 17,
                             CategoriasId = 2,
                             Descricao = "Abajur de mesa de escritório",
-                            ImagemUrl = "/Imagens/Moveis/m7.png",
+                            ImagemUrl = "/Imagens/Moveis/moveis7.png",
                             Nome = "Office Table Lamp",
                             Preco = 20m,
                             Quantidade = 73
@@ -328,7 +331,7 @@ namespace BlazorShopApi.Migrations
                             Id = 18,
                             CategoriasId = 4,
                             Descricao = "Tênis Puma confortáveis na maioria dos tamanhos",
-                            ImagemUrl = "/Imagens/Calcados/c1.png",
+                            ImagemUrl = "/Imagens/Calcados/calcado1.png",
                             Nome = "Tênis Puma",
                             Preco = 100m,
                             Quantidade = 50
@@ -338,7 +341,7 @@ namespace BlazorShopApi.Migrations
                             Id = 19,
                             CategoriasId = 4,
                             Descricao = "Tênis coloridos - disponíveis na maioria dos tamanhos",
-                            ImagemUrl = "/Imagens/Calcados/c2.png",
+                            ImagemUrl = "/Imagens/Calcados/calcado2.png",
                             Nome = "Tênis Colodiros",
                             Preco = 150m,
                             Quantidade = 60
@@ -348,7 +351,7 @@ namespace BlazorShopApi.Migrations
                             Id = 20,
                             CategoriasId = 4,
                             Descricao = "Tênis Nike azul - disponível na maioria dos tamanhos",
-                            ImagemUrl = "/Imagens/Calcados/c3.png",
+                            ImagemUrl = "/Imagens/Calcados/calcado3.png",
                             Nome = "Tênis Nike Azul",
                             Preco = 200m,
                             Quantidade = 70
@@ -358,7 +361,7 @@ namespace BlazorShopApi.Migrations
                             Id = 21,
                             CategoriasId = 4,
                             Descricao = "Treinadores Hummel coloridos - disponíveis na maioria dos tamanhos",
-                            ImagemUrl = "/Imagens/Calcados/c4.png",
+                            ImagemUrl = "/Imagens/Calcados/calcado4.png",
                             Nome = "Tênis Hummel Coloridos",
                             Preco = 120m,
                             Quantidade = 120
@@ -368,7 +371,7 @@ namespace BlazorShopApi.Migrations
                             Id = 22,
                             CategoriasId = 4,
                             Descricao = "Tênis Nike vermelho - disponível na maioria dos tamanhos",
-                            ImagemUrl = "/Imagens/Calcados/c5.png",
+                            ImagemUrl = "/Imagens/Calcados/calcado5.png",
                             Nome = "Tênis Nike Vermelho",
                             Preco = 200m,
                             Quantidade = 100
@@ -378,7 +381,7 @@ namespace BlazorShopApi.Migrations
                             Id = 23,
                             CategoriasId = 4,
                             Descricao = "Sandálias Birkenstock - disponíveis na maioria dos tamanhos",
-                            ImagemUrl = "/Imagens/Calcados/c6.png",
+                            ImagemUrl = "/Imagens/Calcados/calcado6.png",
                             Nome = "Sandálidas Birkenstock",
                             Preco = 50m,
                             Quantidade = 150
