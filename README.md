@@ -1,4 +1,4 @@
-**Documentação da Loja Virtual**
+**Documentação**
 
 ---
 
