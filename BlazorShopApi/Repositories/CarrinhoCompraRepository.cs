@@ -13,9 +13,33 @@ namespace BlazorShopApi.Repositories
             _context = context;
         }
 
-        public Task<CarrinhoItem> AdicionaItem(CarrinhoItemAdicionaDto carrinhoItemAdicionaDto)
+        public async Task<CarrinhoItem> AdicionaItem(CarrinhoItemAdicionaDto carrinhoItemAdicionaDto)
         {
-            throw new NotImplementedException();
+            //Verifica se o produto já existe 
+            if (await carrinhoItemJaExiste(carrinhoItemAdicionaDto.CarrinhoId, carrinhoItemAdicionaDto.ProdutoId) == false)
+            {
+                //Cria um novo item no carrinho
+                var item = await (from produto in _context.Produtos
+                                  where produto.Id == carrinhoItemAdicionaDto.ProdutoId
+                                  select new CarrinhoItem
+                                  {
+                                      CarrinhoId = carrinhoItemAdicionaDto.CarrinhoId,
+                                      ProdutoId = carrinhoItemAdicionaDto.ProdutoId,
+                                      Quantidade = carrinhoItemAdicionaDto.Quantidade,
+
+                                  }).SingleOrDefaultAsync();
+
+                //Se o item existir então incluir o item no carrinho 
+
+                if(item is not null)
+                {
+                    var resultado = await _context.carrinhoItems.AddAsync(item);
+                    await _context.SaveChangesAsync();
+                    return resultado.Entity;
+                }
+            }
+            return null;
+
         }
 
         public Task<CarrinhoItem> AtualizaQuantidade(int id, CarrinhoItemAttQuantidadeDto carrinhoItemAtualizaQuantidadeDto)
@@ -43,7 +67,12 @@ namespace BlazorShopApi.Repositories
                              CarrinhoId = CarrinhoItem.Id
                          }).SingleOrDefaultAsync();
         }
+        private async Task<bool> carrinhoItemJaExiste(int carrinhoid, int produtoId)
+        {
+            return await _context.carrinhoItems.AnyAsync( c => c.CarrinhoId == carrinhoid && c.ProdutoId == produtoId);
+        }
 
+     
         public Task<IEnumerable<CarrinhoItem>> GetItem(string usuarioId)
         {
             throw new NotImplementedException();

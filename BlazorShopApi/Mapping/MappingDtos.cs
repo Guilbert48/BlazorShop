@@ -62,6 +62,7 @@ namespace BlazorShopApi.Mapping
                         CarrinhoId = carrinhoItem.CarrinhoId,
                         Quantidade = carrinhoItem.Quantidade,
                         PrecoTotal = produto.Preco * carrinhoItem.Quantidade
+
                     }).ToList();
         }
 
