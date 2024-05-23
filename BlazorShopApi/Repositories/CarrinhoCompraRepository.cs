@@ -72,13 +72,7 @@ namespace BlazorShopApi.Repositories
             return await _context.carrinhoItems.AnyAsync( c => c.CarrinhoId == carrinhoid && c.ProdutoId == produtoId);
         }
 
-     
-        public Task<IEnumerable<CarrinhoItem>> GetItem(string usuarioId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<IEnumerable<CarrinhoItem>> GetItems(int usuarioId)
+        public async Task<IEnumerable<CarrinhoItem>> GetItens(int usuarioId)
         {
             return await (
                           from Carrinho in _context.Carrinhos
